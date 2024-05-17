@@ -178,6 +178,17 @@ public class ProductsController {
 
             try {
                 Product product = repo.findById(id).get();
+
+                Path imagePath = Paths.get("public/images" + product.getImageFileName());
+
+                try {
+                    Files.delete(imagePath);
+                } catch (Exception ex) {
+                    System.out.println("Exception : " + ex.getMessage());
+                }
+
+                repo.delete(product);
+
             } catch (Exception ex) {
                 System.out.println("Exception : " + ex.getMessage());
             }
