@@ -19,7 +19,7 @@ public class Product {
 
     @Column(columnDefinition = "TEXT")
     private String description;
-    private Date createAt;
+    private Date createdAt;
     private String imageFileName;
     
     public int getId() {
@@ -58,11 +58,11 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-    public Date getCreateAt() {
-        return createAt;
+    public Date getCreatedAt() {
+        return createdAt;
     }
-    public void setCreateAt(Date createAt) {
-        this.createAt = createAt;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
     public String getImageFileName() {
         return imageFileName;
@@ -71,4 +71,5 @@ public class Product {
         this.imageFileName = imageFileName;
     }
 
+    
 }
